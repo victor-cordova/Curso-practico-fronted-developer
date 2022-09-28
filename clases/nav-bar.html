@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+    <style>
+        .nav-bar {
+            display: grid;
+            justify-items: center;
+            height: 50px;
+
+            border-bottom: 1px solid var(--very-light-pink);
+        }
+
+        .nav-bar__container {
+            display: grid;
+            grid-template-columns: 110px 6fr 1.7fr;
+            align-items: center;
+            /* gap: 5px; */
+
+            width: 95%;
+        }
+
+        .nav-bar__menu {
+            display: none;
+        }
+
+        .list-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 90px);
+            gap: 6px;
+
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* .list-features__item {
+            padding: ;
+        } */
+
+        .list-features__link {
+            text-decoration: none;
+            font-size: var(--md);
+            color: var(--very-light-pink);
+            border-radius: 6px;
+            padding: 6px;
+        }
+
+        .list-features__link:hover {
+            border: 1px solid var(--hospital-green);
+            color: var(--hospital-green);
+        }
+
+        .nav-bar__cart-user {
+            display: grid;
+            grid-template-columns: auto 30px;
+            align-items: center;
+        }
+
+        .nav-bar__user {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            /* grid-template-rows: 1fr; */
+            /* grid-template-columns: auto 15px; */
+        }
+
+        .nav-bar__email {
+            /* width: auto; */
+            /* display: grid; */
+            /* align-items: center; */
+            /* margin-left: 10px;
+            transform: rotate(90deg); */
+            font-size: var(--sm);
+            color: var(--very-light-pink);
+        }
+
+        .nav-bar__arrow {
+            margin-left: 5px;
+            /* margin-top: 5px; */
+            /* padding-top: 5px; */
+            width: 12px;
+            height: 12px;
+
+            transform: rotate(90deg);
+        }
+
+        .nav-bar__cart-container {
+            position: relative;
+        }
+
+        .nav-bar__cart-amount {
+            position: absolute;
+            top: -8px;
+            left: 16px;
+            display: grid;
+            place-items: center;
+
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+
+            font-size: var(--sm);
+            font-weight: bold;
+
+            background-color: var(--hospital-green);
+        }
+        
+        @media (max-width: 640px) {
+            .nav-bar__container {
+                /* display: grid; */
+                grid-template-columns: 1fr 1fr 1fr;
+                /* align-items: center; */
+                /* gap: 5px; */
+
+                width: 90%;
+            }
+
+            .nav-bar__menu {
+                display: block;
+            }
+
+            .nav-bar__logo-yard-sale {
+                justify-self: center;
+            }
+
+            .list-features {
+                display: none;
+            }
+
+            .nav-bar__cart-user {
+                /* display: grid; */
+                grid-template-columns: 1fr;
+                justify-items: flex-end;
+                /* align-items: center; */
+            }
+
+            .nav-bar__user {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="nav-bar__container">
+
+            <div
+                class="nav-bar__menu"
+            >
+                <img 
+                    src="../assets/icons/icon_menu.svg" 
+                    alt="Icon menu"
+                    
+                >
+            </div>
+
+            <div
+                class="nav-bar__logo-yard-sale"
+            >
+                <img 
+                    src="../assets/logos/logo_yard_sale.svg" 
+                    alt="Logo yard sale"
+                >
+            </div>
+
+            <ul class="list-features">
+                <li class="list-features__item">
+                    <a href="/" class="list-features__link">All</a>
+                </li>
+
+                <li class="list-features__item">
+                    <a href="/" class="list-features__link">Clothes</a>
+                </li>
+
+                <li class="list-features__item">
+                    <a href="/" class="list-features__link">Electronics</a>
+                </li>
+
+                <li class="list-features__item">
+                    <a href="/" class="list-features__link">Furniture</a>
+                </li>
+
+                <li class="list-features__item">
+                    <a href="/" class="list-features__link">Toys</a>
+                </li>
+
+                <li class="list-features__item">
+                    <a href="/" class="list-features__link">Others</a>
+                </li>
+            </ul>
+
+            <div class="nav-bar__cart-user">
+                <div class="nav-bar__user">
+                    <p class="nav-bar__email">user@email.com
+                        <img 
+                            src="/assets/icons/flechita.svg" 
+                            alt=""
+                            class="nav-bar__arrow"
+                        >
+                    </p>
+                </div>
+                <div class="nav-bar__cart-container">
+                    <img 
+                        src="/assets/icons/icon_shopping_cart.svg" 
+                        alt=""
+                        class="nav-bar__cart"
+                    >
+                    <div class="nav-bar__cart-amount">2</div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </nav>
+</body>
+</html>

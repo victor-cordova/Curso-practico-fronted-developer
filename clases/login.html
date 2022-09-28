@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Quicksand:wght@300;500;700&display=swap" 
+        rel="stylesheet"
+    >
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+    <style>
+        .login {
+            display: grid;
+            place-items: center;
+            
+            width: 100%;
+            height: 100vh;
+            
+            font-size: 1rem;
+        }
+
+        .login__container {
+            display: grid;
+            grid-template-rows: auto auto auto;
+
+            width: 300px;
+        }
+
+        .login__logo {
+            display: none;
+            place-self: center;
+
+            margin-bottom: 48px;
+        }
+
+        .login__logo--yard-sale {
+            /* margin-bottom: 48px; */
+            
+            width: 150px;
+        }
+
+        .form {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .form__label {
+            margin-bottom: 4px;
+
+            font-size: var(--sm);
+            font-weight: bold;
+        }
+
+        .form__input {
+            padding: 8px;
+            margin-bottom: 22px;
+            border: none;
+            border-radius: 8px;
+            height: 32px;
+
+            font-size: var(--md);
+            
+            background-color: var(--text-input-field);
+        }
+
+        .login-button {
+            border-radius: 8px;
+            height: 48px;
+            width: 100%;
+
+            margin-top: 12px;
+            margin-bottom: 32px;
+
+            font-size: var(--md);
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .primary-button {
+            border: none;
+
+            color: var(--white);
+
+            background-color: var(--hospital-green);
+        }
+
+        .secondary-button {
+            border: 1px solid var(--hospital-green);
+
+            color: var(--hospital-green);
+
+            background-color: var(--white);
+        }
+
+        .login__text {
+            font-size: var(--sm);
+        }
+
+        .login__text--forgot-password {
+            margin-bottom: 48px;
+        }
+
+        .login__link {
+            color: var(--hospital-green);
+            text-decoration: none;
+        }
+
+        @media (max-width: 640px){
+            .login__container {
+                grid-template-rows: 1fr auto auto auto;
+            }
+            
+            .login__logo {
+                display: block;
+            }
+
+            .login__text--forgot-password {
+                margin-bottom: 0px;
+            }
+
+            .secondary-button {
+            /* border: 1px solid var(--hospital-green);
+
+            color: var(--hospital-green);
+
+            background-color: var(--white); */
+                width: 300px;
+                position: absolute;
+                bottom: 20px;
+            }   
+
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="login__container">
+            <img 
+                src="../assets/logos/logo_yard_sale.svg" 
+                alt="logo" 
+                class="login__logo login__logo--yard-sale"
+            >
+
+            <form action="/" class="form">
+                <label for="email" class="form__label">Email address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    class="form__input form__input--email" 
+                    placeholder="user@email.com"
+                    required
+                >
+
+                <label for="password" class="form__label">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    class="form__input form__input--password" 
+                    placeholder="*********"
+                    required
+                >
+
+                <input 
+                    type="submit" 
+                    class="primary-button login-button" 
+                    value="Confirm"
+                >
+            </form>
+
+            <p class="login__text login__text--forgot-password">
+                <a 
+                    href="/" 
+                    class="login__link"
+                >Forgot my password</a>
+            </p>
+            
+
+            <button
+                class="secondary-button login-button" 
+            >Sign up</button>
+        </div>
+    </div>
+</body>
+</html>

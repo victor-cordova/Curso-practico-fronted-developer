@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+    <style>
+        .desktop-menu {
+            display: grid;
+
+            width: 100%;
+            height: 100vh;
+
+            /* border: 1px solid var(--very-light-pink); */
+            /* border-radius: 6px; */
+        }
+
+        .desktop-menu__list-items {
+            display: grid;
+            grid-template-rows: repeat(11, 1fr);
+            /* justify-items: flex-end; */
+            /* align-items: center; */
+
+            padding: 0;
+            margin: 0;
+
+            list-style: none;
+        }
+
+        .desktop-menu__item {
+            display: grid;
+            /* justify-items: flex-end; */
+            align-items: center;
+
+            /* padding-right: 16px; */
+            width: 100%;
+            height: 100%;
+
+            font-size: var(--sm);
+        }
+
+        .desktop-menu__item--line {
+            border-top: 1px solid var(--very-light-pink);
+        }
+        
+        .desktop-menu__item--sign-out {
+            /* align-self: flex-end; */
+            /* border-top: 1px solid var(--very-light-pink); */
+            grid-row: 10/12;
+        }
+        
+
+        .desktop-menu__title {
+            margin-left: 40px;
+
+            font-size: var(--lg);
+            font-weight: bold;
+            color: var(--black);
+        }
+
+        .desktop-menu__link {
+            margin-left: 40px;
+
+            text-decoration: none;
+            color: var(--black);
+            font-size: var(--md);
+            font-weight: bold;
+        }
+
+        .desktop-menu__link--email {
+            color: var(--very-light-pink);
+            font-size: var(--sm);
+            font-weight: 400;
+        }
+
+        .desktop-menu__link--sign-out {
+            color: var(--hospital-green);
+            font-size: var(--sm);
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="desktop-menu">
+        <ul class="desktop-menu__list-items">
+
+            <li class="desktop-menu__item">
+                <h1 class="desktop-menu__title">CATEGORIES</h1>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">All</a>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">Clothes</a>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">Electronics</a>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">furnitures</a>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">Toys</a>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">Others</a>
+            </li>
+
+            <li class="desktop-menu__item desktop-menu__item--line">
+                <a href="" class="desktop-menu__link">My orders</a>
+            </li>
+
+            <li class="desktop-menu__item">
+                <a href="" class="desktop-menu__link">My account</a>
+            </li>
+
+            <li class="desktop-menu__item desktop-menu__item--sign-out">
+                <div class="sign-out-container">
+                    <p class="desktop-menu__link desktop-menu__link--email">user@email.com</p>
+                    <a 
+                        href="" 
+                        class="desktop-menu__link desktop-menu__link--sign-out"
+                    >Sign out</a>
+                </div>
+                
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
